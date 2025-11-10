@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Saviomds</title>
+  </head>
+  <body>
+    <header id="main-header">
+      <div class="header-nav">
+        <div class="heading">
+          <h1>Saviomds</h1>
+        </div>
+
+        <!-- Toggle Button (small screens) -->
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav class="nav-links">
+          <ul id="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <div class="search-container">
+              <input type="text" placeholder="Search..." class="search-input" />
+              <button class="search-button">Go</button>
+            </div>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="profile-section">
+      <div class="profile-card">
+        <!-- Profile Header -->
+        <div class="profile-header">
+          <div class="profile-image">
+            <img src="./image/profile/owner.png" alt="Dominique Savio" />
+          </div>
+          <div class="profile-info">
+            <h2>Dominique Savio</h2>
+            <p>Full Stack Developer & Digital Creator</p>
+            <div class="profile-actions">
+              <button class="btn-primary">Edit Profile</button>
+              <button class="btn-secondary">Download CV</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="profile-skills">
+          <h3>Skills</h3>
+          <div class="skills-list">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React</span>
+            <span>Node.js</span>
+            <span>UI/UX Design</span>
+          </div>
+        </div>
+
+        <!-- Recent Projects -->
+        <div class="profile-projects">
+          <h3>Recent Projects</h3>
+          <div class="projects-list">
+            <div class="project">
+              <img
+                src="./image/item-list/JavaScript-logo.png"
+                alt="JS Project"
+              />
+              <div>
+                <h4>JavaScript Mastery</h4>
+                <p>Interactive JS dashboard app</p>
+              </div>
+            </div>
+            <div class="project">
+              <img src="./image/item-list/reactjs.png" alt="React Project" />
+              <div>
+                <h4>React Portfolio</h4>
+                <p>Dynamic portfolio website</p>
+              </div>
+            </div>
+            <div class="project">
+              <img src="./image/item-list/ui-ux.jpg" alt="UX/UI Project" />
+              <div>
+                <h4>UI/UX Case Study</h4>
+                <p>Redesign for e-commerce app</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="main-section">
+      <div class="content">
+        <h2>Welcome to Savio's Portfolio</h2>
+        <p>
+          Your one-stop solution for all your needs. We provide fast, reliable,
+          and creative solutions for your projects.
+        </p>
+
+        <!-- Call-to-action buttons -->
+        <div class="cta-buttons">
+          <a href="#services" class="btn-primary">Get Started</a>
+          <a href="#about" class="btn-secondary">Learn More</a>
+        </div>
+
+        <!-- Highlights / Features -->
+        <ul class="highlights">
+          <li>✅ Fast & Reliable Services</li>
+          <li>🎨 Creative & Custom Designs</li>
+          <li>📈 Boost Your Productivity</li>
+        </ul>
+
+        <!-- Small links / extra -->
+        <p class="more-info">
+          <a href="#contact">Contact us</a> or check our
+          <a href="#services">services</a> for details.
+        </p>
+      </div>
+
+      <div class="items-list">
+        <div class="item">
+          <div class="image">
+            <img
+              src="./image/item-list/JavaScript-logo.png"
+              alt="JavaScript Mastery Course"
+            />
+          </div>
+          <div class="title">
+            <h3>JavaScript Mastery</h3>
+            <small
+              >Comprehensive JavaScript Course for Beginners & Advanced
+              Learners</small
+            >
+            <div class="category">Programming</div>
+          </div>
+          <div class="status available">
+            Shipped
+            <small class="date">10 Nov 2025</small>
+          </div>
+          <div class="price">$49</div>
+          <div class="actions">
+            <button class="btn-action view">View</button>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="image">
+            <img
+              src="./image/item-list/html-css.png"
+              alt="HTML & CSS Design Course"
+            />
+          </div>
+          <div class="title">
+            <h3>HTML & CSS Essentials</h3>
+            <small
+              >Learn how to build beautiful, responsive websites from
+              scratch</small
+            >
+            <div class="category">Web Design</div>
+          </div>
+          <div class="status pending">
+            Pending
+            <small class="date">10 Nov 2025</small>
+          </div>
+          <div class="price">$29</div>
+          <div class="actions">
+            <button class="btn-action view">View</button>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="image">
+            <img src="./image/item-list/reactjs.png" alt="React JS Course" />
+          </div>
+          <div class="title">
+            <h3>React JS Fundamentals</h3>
+            <small
+              >Build dynamic, interactive web apps using React and modern
+              JavaScript</small
+            >
+            <div class="category">Frontend Development</div>
+          </div>
+          <div class="status available">
+            Shipped
+            <small class="date">12 Nov 2025</small>
+          </div>
+          <div class="price">$59</div>
+          <div class="actions">
+            <button class="btn-action view">View</button>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="image">
+            <img src="./image/item-list/ui-ux.jpg" alt="UX/UI Design Course" />
+          </div>
+          <div class="title">
+            <h3>UX/UI Design Basics</h3>
+            <small
+              >Learn the fundamentals of user experience and interface
+              design</small
+            >
+            <div class="category">Design</div>
+          </div>
+          <div class="status pending">
+            Pending
+            <small class="date">15 Nov 2025</small>
+          </div>
+          <div class="price">$39</div>
+          <div class="actions">
+            <button class="btn-action view">View</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>
+            Hi, I’m Savio, a passionate web developer and designer with a love
+            for building interactive, user-friendly websites and applications. I
+            specialize in modern JavaScript, React, and UI/UX design.
+          </p>
+          <p>
+            I aim to deliver creative solutions that not only look great but
+            also improve functionality and user experience. My goal is to help
+            clients bring their ideas to life.
+          </p>
+
+          <!-- CTA -->
+          <div class="about-cta">
+            <a href="#contact" class="btn-primary">Hire Me</a>
+            <a href="#portfolio" class="btn-secondary">View Work</a>
+          </div>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat">
+            <h3>5+</h3>
+            <p>Years Experience</p>
+          </div>
+          <div class="stat">
+            <h3>50+</h3>
+            <p>Projects Completed</p>
+          </div>
+          <div class="stat">
+            <h3>30+</h3>
+            <p>Happy Clients</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="services" class="services-section">
+      <h2>My Services</h2>
+      <p class="section-subtitle">What I can do for you</p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">💻</div>
+          <h3>Web Development</h3>
+          <p>
+            Building fast, responsive, and dynamic websites using modern
+            technologies like HTML, CSS, JavaScript, and React.
+          </p>
+          <a href="#contact" class="btn-secondary">Learn More</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🎨</div>
+          <h3>UI/UX Design</h3>
+          <p>
+            Designing user-friendly interfaces and experiences that make your
+            applications intuitive and visually appealing.
+          </p>
+          <a href="#contact" class="btn-secondary">Learn More</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">⚡</div>
+          <h3>Frontend Development</h3>
+          <p>
+            Creating interactive and dynamic web apps with React, JavaScript,
+            and modern frameworks for smooth user experiences.
+          </p>
+          <a href="#contact" class="btn-secondary">Learn More</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🛠️</div>
+          <h3>Backend Development</h3>
+          <p>
+            Setting up server-side logic, databases, and APIs to ensure your
+            applications run seamlessly.
+          </p>
+          <a href="#contact" class="btn-secondary">Learn More</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">⚙️</div>
+          <h3>Full Stack Development</h3>
+          <p>
+            End-to-end solutions combining frontend and backend development for
+            complete web applications.
+          </p>
+          <a href="#contact" class="btn-secondary">Learn More</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">📈</div>
+          <h3>SEO & Performance</h3>
+          <p>
+            Optimizing websites for speed, SEO, and better user engagement to
+            boost your online presence.
+          </p>
+          <a href="#contact" class="btn-secondary">Learn More</a>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact-section">
+      <h2>Contact Me</h2>
+      <p class="section-subtitle">
+        Get in touch for projects, collaborations, or inquiries
+      </p>
+
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h3>Reach Me</h3>
+          <p><strong>Phone:</strong> +230 5475 3221 / +250 7867 31976</p>
+          <p><strong>Email:</strong> dominiquesaviomds@gmail.com</p>
+          <p><strong>Location:</strong> Port Louis, Mauritius</p>
+
+          <!-- Social Links -->
+          <div class="contact-socials">
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
+            <a href="https://github.com" target="_blank">GitHub</a> |
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <h3>Send a Message</h3>
+          <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <input type="text" name="subject" placeholder="Subject" required />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="5"
+              required
+            ></textarea>
+            <button type="submit" class="btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Optional Map -->
+      <div class="contact-map">
+        <h3>My Location</h3>
+        <div class="map-placeholder">
+          <!-- You can embed Google Maps iframe here later -->
+          <p>Map of Port Louis, Mauritius</p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("nav-menu");
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("show-menu");
+        toggle.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
