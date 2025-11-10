@@ -1,0 +1,60 @@
+/* Base: hide toggle on large screens */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: auto; /* push toggle to the right in flex container */
+}
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* Show toggle on small screens */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    position: absolute; /* absolute positioning inside header */
+    top: 20px;
+    right: 20px;
+    z-index: 1000; /* stay above other elements */
+  }
+
+  .nav-links ul {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #111;
+    width: 250px;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links ul.show-menu {
+    display: flex;
+  }
+
+  /* Remove side-by-side layout */
+  .header-nav {
+    flex-wrap: wrap;
+    position: relative;
+    right: 10px;
+  }
+}
+
+/* Toggle Animation */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
