@@ -34,7 +34,7 @@ export default function RootLayout({
           {children}
         </main>
         <footer className="py-12 border-t border-slate-800 text-center text-slate-500 text-sm">
-          <p>© {new Date().getFullYear()} Saviomds. Built with Next.js & Tailwind CSS.</p>
+       <p>© {new Date().getFullYear()} Saviomds. Crafted with Next.js & Tailwind CSS.</p>
         </footer>
       </body>
     </html>
