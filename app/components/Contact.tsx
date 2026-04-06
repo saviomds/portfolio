@@ -52,9 +52,9 @@ export default function Contact() {
             
             <div className="space-y-4 pt-4 md:pt-8">
               <div className="flex items-center gap-4 group cursor-pointer">
-                <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors text-lg">📧</div>
+                <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors text-lg">📞</div>
                 <span className="font-medium text-sm md:text-base break-all group-hover:text-blue-200 transition-colors">
-                  dominiquesaviomds@gmail.com
+                 (+230) 54753221
                 </span>
               </div>
               <div className="flex items-center gap-4">
