@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import { useRouter } from "next/navigation"; // Import the router
 import { sendEmail } from "@/app/actions/contact";
 
 export default function Contact() {
@@ -8,6 +9,7 @@ export default function Contact() {
   const [isSuccess, setIsSuccess] = useState(false);
   const [projectType, setProjectType] = useState("");
   const formRef = useRef<HTMLFormElement>(null);
+  const router = useRouter(); // Initialize the router
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -20,12 +22,17 @@ export default function Contact() {
       setIsSubmitting(false);
       setIsSuccess(true);
       
-      // Reset logic
+      // 1. Reset the form
+      formRef.current?.reset();
+      setProjectType("");
+
+      // 2. Redirect to onboarding after a tiny delay so they see the success checkmark
       setTimeout(() => {
-        setIsSuccess(false);
-        setProjectType("");
-        formRef.current?.reset();
-      }, 5000);
+        router.push("/onboarding");
+      }, 1500); 
+    } else {
+      setIsSubmitting(false);
+      alert("Something went wrong. Please try again.");
     }
   };
 
@@ -33,7 +40,7 @@ export default function Contact() {
     <section id="contact" className="py-12 md:py-24 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto bg-gradient-to-br from-blue-600 to-indigo-700 rounded-3xl md:rounded-[3rem] p-6 sm:p-8 md:p-12 overflow-hidden relative">
         
-        {/* Background Decorative Circle - Scaled down for mobile */}
+        {/* Background Decorative Circle */}
         <div className="absolute right-0 bottom-0 opacity-10 translate-x-1/4 translate-y-1/4">
            <svg width="250" height="250" className="md:w-[400px] md:h-[400px]" viewBox="0 0 200 200" fill="white">
              <circle cx="100" cy="100" r="100" />
@@ -54,7 +61,7 @@ export default function Contact() {
               <div className="flex items-center gap-4 group cursor-pointer">
                 <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors text-lg">📞</div>
                 <span className="font-medium text-sm md:text-base break-all group-hover:text-blue-200 transition-colors">
-                 (+230) 54753221
+                  (+230) 54753221
                 </span>
               </div>
               <div className="flex items-center gap-4">
@@ -66,11 +73,12 @@ export default function Contact() {
           
           {/* Form Section */}
           <div className="relative">
+            {/* Success Overlay */}
             {isSuccess && (
               <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-blue-900/95 backdrop-blur-md rounded-2xl md:rounded-3xl text-center p-6 animate-in fade-in zoom-in duration-300">
                 <div className="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center text-2xl mb-4 text-white shadow-lg shadow-emerald-500/20">✓</div>
                 <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                <p className="text-blue-100">Thanks for reaching out. I{"'"}ll get back to you shortly.</p>
+                <p className="text-blue-100">Redirecting you to next steps...</p>
               </div>
             )}
 
