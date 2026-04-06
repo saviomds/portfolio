@@ -30,44 +30,54 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-6">
-      <div className="max-w-6xl mx-auto bg-gradient-to-br from-blue-600 to-indigo-700 rounded-[3rem] p-12 overflow-hidden relative">
+    <section id="contact" className="py-12 md:py-24 px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto bg-gradient-to-br from-blue-600 to-indigo-700 rounded-3xl md:rounded-[3rem] p-6 sm:p-8 md:p-12 overflow-hidden relative">
+        
+        {/* Background Decorative Circle - Scaled down for mobile */}
         <div className="absolute right-0 bottom-0 opacity-10 translate-x-1/4 translate-y-1/4">
-           <svg width="400" height="400" viewBox="0 0 200 200" fill="white">
+           <svg width="250" height="250" className="md:w-[400px] md:h-[400px]" viewBox="0 0 200 200" fill="white">
              <circle cx="100" cy="100" r="100" />
            </svg>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-12 relative z-10">
-          <div className="text-white space-y-6">
-            <h2 className="text-4xl font-bold leading-tight">Ready to launch your next big idea?</h2>
-            <p className="text-blue-100 text-lg">Let{"'"}s connect and discuss how I can help your project thrive.</p>
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-12 relative z-10">
+          {/* Text Content Section */}
+          <div className="text-white space-y-4 md:space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+              Ready to launch your next big idea?
+            </h2>
+            <p className="text-blue-100 text-base md:text-lg max-w-md">
+              Let{"'"}s connect and discuss how I can help your project thrive.
+            </p>
             
-            <div className="space-y-4 pt-8">
+            <div className="space-y-4 pt-4 md:pt-8">
               <div className="flex items-center gap-4 group cursor-pointer">
-                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors text-xl">📧</div>
-                <span className="font-medium group-hover:text-blue-200 transition-colors">dominiquesaviomds@gmail.com</span>
+                <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors text-lg">📧</div>
+                <span className="font-medium text-sm md:text-base break-all group-hover:text-blue-200 transition-colors">
+                  dominiquesaviomds@gmail.com
+                </span>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-xl">📍</div>
-                <span className="font-medium">Port Louis, Mauritius</span>
+                <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center text-lg">📍</div>
+                <span className="font-medium text-sm md:text-base">Port Louis, Mauritius</span>
               </div>
             </div>
           </div>
           
+          {/* Form Section */}
           <div className="relative">
             {isSuccess && (
-              <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-blue-900/90 backdrop-blur-md rounded-3xl text-center p-6 animate-in fade-in zoom-in duration-300">
+              <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-blue-900/95 backdrop-blur-md rounded-2xl md:rounded-3xl text-center p-6 animate-in fade-in zoom-in duration-300">
                 <div className="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center text-2xl mb-4 text-white shadow-lg shadow-emerald-500/20">✓</div>
                 <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
                 <p className="text-blue-100">Thanks for reaching out. I{"'"}ll get back to you shortly.</p>
               </div>
             )}
 
-            <form ref={formRef} onSubmit={handleSubmit} className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 space-y-4">
-              <div className="grid md:grid-cols-2 gap-4">
-                <input required type="text" name="name" placeholder="Your Name" className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:bg-white/20 focus:border-white/30 outline-none transition-all" />
-                <input required type="email" name="email" placeholder="Email Address" className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:bg-white/20 focus:border-white/30 outline-none transition-all" />
+            <form ref={formRef} onSubmit={handleSubmit} className="bg-white/10 backdrop-blur-md p-5 md:p-8 rounded-2xl md:rounded-3xl border border-white/20 space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input required type="text" name="name" placeholder="Your Name" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:bg-white/20 focus:border-white/30 outline-none transition-all" />
+                <input required type="email" name="email" placeholder="Email Address" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:bg-white/20 focus:border-white/30 outline-none transition-all" />
               </div>
 
               <div className="relative">

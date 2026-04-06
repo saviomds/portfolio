@@ -17,7 +17,7 @@ const projects = [
   {
     title: "AI Interface",
     category: "UI/UX Design",
-    image: "/image/project3.png",
+    image: "/image/project3.PNG",
     link: "#"
   }
 ];
